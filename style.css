@@ -144,6 +144,19 @@ header {
     font-weight: 200;
   }
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(174, 111, 15);
+}
+.footer__content {
+  color: white;
+}
+.footer__content a {
+  text-decoration: none;
+  color: greenyellow;
+}
+
 * {
   padding: 0;
   margin: 0;
