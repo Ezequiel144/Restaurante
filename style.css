@@ -1,5 +1,5 @@
 header {
-  padding: 10px 0;
+  padding: 30px 0 0 0;
   /* border: 1px solid red; */
 }
 
@@ -29,7 +29,6 @@ header {
 .list__art__li__a {
   text-decoration: none;
   color: #9e713e;
-  border: 1px solid #9e713e;
   border-radius: 10px;
   padding: 5px 10px;
   font-weight: 400;
@@ -65,7 +64,7 @@ header {
   /* border: 1px solid blue; */
 }
 .sec1__content__mod {
-  max-height: 200px;
+  min-height: 170px;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -120,6 +119,17 @@ header {
   }
 }
 @media (min-width: 900px) {
+  .sec1__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 30px;
+  }
+  .sec1__content__mod {
+    max-width: 500px;
+  }
   .sec1__content__mod__img {
     width: 400px;
   }
@@ -127,10 +137,10 @@ header {
     width: 100%;
   }
   .sec1__content__mod__text__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .sec1__content__mod__text__p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
   }
 }
