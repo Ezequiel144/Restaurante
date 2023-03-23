@@ -1,0 +1,97 @@
+.main{
+    padding: 50px 15px;
+    @media (min-width:430px) {
+        padding: 50px 25px;
+    }
+}
+
+.sec1{
+    /* border: 1px solid red; */
+    &__content{
+        /* border: 1px solid blue; */
+        
+        &__mod{
+            max-height: 200px;    
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            gap: 10px;
+            /* border: 1px solid red; */
+            margin-bottom: 30px;
+            &__img{
+                /* border: 1px solid red; */
+                width: 115%;
+                &__i{
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #9e713e;
+                    border-radius: 10px; 
+                }
+            }
+            &__text{
+                /* border: 1px solid red; */
+                width: 350px;
+                height: 100%;
+                &__title{
+                    padding-bottom: 2px;
+                    border-bottom: 1px solid rgb(182, 180, 180);
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1rem;
+                    &__price{
+                        color: #9e713e;
+                    }
+                }
+                &__p{
+                    height: 100%;
+                    font-size: 0.8rem;
+                    padding: 5px 0 0 0;
+                    color: rgb(118, 117, 117);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:530px) {
+    .sec1{
+        &__content{
+            &__mod{
+                &__img{
+                    width: 400px;
+                }
+                &__text{
+                    width: 100%;
+                    &__title{
+                        font-size: 1.3rem;
+                    }
+                    &__p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:900px) {
+    .sec1{
+        &__content{
+            &__mod{
+                &__img{
+                    width: 400px;
+                }
+                &__text{
+                    width: 100%;
+                    &__title{
+                        font-size: 2rem;
+                    }
+                    &__p{
+                        font-size: 1.5rem;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+}
