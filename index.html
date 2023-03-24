@@ -23,9 +23,15 @@
             <h3 class="bton__ag">agregar</h3>
         </div>
     </header>
-    <div class="">
-        <form action="">
-            
+    <div class="modal">
+        <form class="modal__form" method="post">
+            <label class="modal__form__title" for="title">titulo</label>
+            <input id="titulo" class="modal__form__enter" id="title" type="text">
+            <label class="modal__form__title" for="img">imagenes</label>
+            <input id="arch" class="modal__form__img" id="img" type="file">
+            <label class="modal__form__title" for="text">texto</label>
+            <textarea id="texto" class="modal__form__enter" id="text"></textarea>
+            <input class="modal__form__send" type="button" value="enviar" onclick="captura()">
         </form>
     </div>
     <main class="main">

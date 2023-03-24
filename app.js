@@ -43,9 +43,26 @@ const menu = [
     },
 ]
 
+class Comidas{
+    constructor(img,title,text,price,tipo){
+        this.img = img;
+        this.title = title;
+        this.text = text;
+        this.price = price;
+        this.tipo = tipo;
+    }
+}
+
 
 const contSec1 = document.querySelector(".sec1__content");
 const listLink = document.querySelectorAll(".list__art__li__a");
+const agregar = document.querySelector(".bton__ag");
+const modal = document.querySelector(".modal");
+
+
+agregar.addEventListener("click",()=>{
+    modal.classList.toggle("mostrar");
+})
 
 function creatMenu(menus){
     contSec1.innerHTML = "";
@@ -86,3 +103,14 @@ listLink.forEach(el => {
 });
 
 
+function captura(){
+    const title = document.getElementById("titulo").value;
+    const arch = document.getElementById("arch").value;
+    const texto = document.getElementById("texto").value;
+    menu.push(new Comidas(arch,title,texto));
+    alert(title);
+    alert(arch);
+    alert(texto);
+    console.log(menu[6]);
+    creatMenu(menu);
+}
