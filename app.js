@@ -79,6 +79,7 @@ function creatMenu(menus){
         </div>`
         /* console.log(div); */
         contSec1.append(div);
+        
     }
 }
 
@@ -107,11 +108,18 @@ function captura(){
     const title = document.getElementById("titulo").value;
     const arch = document.getElementById("arch").value;
     const texto = document.getElementById("texto").value;
-    const price = document.getElementById("")
-    menu.push(new Comidas(arch,title,texto));
-    alert(title);
+    const price = document.getElementById("price").value;
+    const tipo = document.getElementById("tipo").value.toLowerCase();
+    menu.push(new Comidas(arch,title,texto,price,tipo));
+    /* alert(title);
     alert(arch);
     alert(texto);
-    console.log(menu[6]);
+    alert(price);
+    alert(tipo); */
+    console.log(menu[6].text);
+    console.log(menu[6].img);
+    console.log(menu[6].price);
+    console.log(menu[6].tipo);
+    console.log(menu[6].title);
     creatMenu(menu);
 }

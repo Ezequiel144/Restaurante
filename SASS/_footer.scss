@@ -1,13 +1,18 @@
 .footer{
+    height: 70px;
     display: flex;
     justify-content: center;
-    background-color: rgb(174, 111, 15);
+    align-items: center;
+    background-color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     &__content{
         color: white;
         a{
             text-decoration: none;
-            color: greenyellow;
+            color: white;
+        }
+        a:hover{
+            color: yellowgreen;
         }
     }
 }

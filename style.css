@@ -1,7 +1,22 @@
-header {
-  padding: 30px 0 0 0;
+.header {
+  padding: 30px 0 20px 0;
   /* border: 1px solid red; */
   position: relative;
+  background: rgb(252, 252, 252);
+  background: radial-gradient(circle, rgba(252, 252, 252, 0.3) 67%, rgba(213, 214, 214, 0.3) 91%);
+}
+.header__img {
+  /* border: 1px solid blue; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../img/Header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 }
 
 .title {
@@ -9,6 +24,8 @@ header {
   margin-bottom: 5px;
   font-size: 2.3rem;
   font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }
 
 .liner {
@@ -29,7 +46,7 @@ header {
 }
 .list__art__li__a {
   text-decoration: none;
-  color: #9e713e;
+  color: white;
   border-radius: 10px;
   padding: 5px 10px;
   font-weight: 400;
@@ -53,11 +70,11 @@ header {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: orange;
-  color: black;
+  background-color: #9e713e;
+  color: white;
   padding: 5px;
   border-radius: 20px;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.9rem;
 }
 
@@ -68,6 +85,8 @@ header {
 .main {
   padding: 50px 15px;
   position: relative;
+  background-color: rgb(240, 240, 240);
+  min-height: 100vh;
 }
 @media (min-width: 430px) {
   .main {
@@ -103,7 +122,8 @@ header {
 }
 .sec1__content__mod__text {
   /* border: 1px solid red; */
-  width: 350px;
+  /* width: 350px; */
+  width: 100%;
   height: 100%;
 }
 .sec1__content__mod__text__title {
@@ -117,7 +137,9 @@ header {
   color: #9e713e;
 }
 .sec1__content__mod__text__p {
+  /* border: 1px solid red; */
   height: 100%;
+  width: 100%;
   font-size: 0.8rem;
   padding: 5px 0 0 0;
   color: rgb(118, 117, 117);
@@ -158,6 +180,7 @@ header {
   outline: none;
   color: white;
   border: 0;
+  height: 30px;
 }
 .modal__form__send:hover {
   cursor: pointer;
@@ -208,9 +231,11 @@ header {
   }
 }
 .footer {
+  height: 70px;
   display: flex;
   justify-content: center;
-  background-color: rgb(174, 111, 15);
+  align-items: center;
+  background-color: black;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .footer__content {
@@ -218,7 +243,10 @@ header {
 }
 .footer__content a {
   text-decoration: none;
-  color: greenyellow;
+  color: white;
+}
+.footer__content a:hover {
+  color: yellowgreen;
 }
 
 * {
