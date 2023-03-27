@@ -3,7 +3,7 @@
   /* border: 1px solid red; */
   position: relative;
   background: rgb(252, 252, 252);
-  background: radial-gradient(circle, rgba(252, 252, 252, 0.3) 67%, rgba(213, 214, 214, 0.3) 91%);
+  background: linear-gradient(180deg, rgba(252, 252, 252, 0.3) 60%, rgba(0, 0, 0, 0.5) 85%);
 }
 .header__img {
   /* border: 1px solid blue; */
@@ -70,12 +70,15 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #9e713e;
+  /* border: 2px solid #9e713e; */
   color: white;
   padding: 5px;
   border-radius: 20px;
   font-weight: 300;
   font-size: 0.9rem;
+}
+.bton__ag {
+  text-shadow: 1px 1px 2px black;
 }
 
 .bton:hover {
