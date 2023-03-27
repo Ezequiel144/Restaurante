@@ -112,7 +112,7 @@ function captura(){
     const tipo = document.getElementById("tipo").value.toLowerCase();
     menu.push(new Comidas(arch,title,texto,price,tipo));
     /* alert(title);*/
-    alert(arch);
+    /* alert(arch); */
     /*alert(texto);
     alert(price);
     alert(tipo); */
@@ -122,3 +122,4 @@ function captura(){
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
 })
+form.reset();
