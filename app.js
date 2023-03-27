@@ -107,6 +107,7 @@ function captura(){
     const title = document.getElementById("titulo").value;
     const arch = document.getElementById("arch").value;
     const texto = document.getElementById("texto").value;
+    const price = document.getElementById("")
     menu.push(new Comidas(arch,title,texto));
     alert(title);
     alert(arch);

@@ -99,6 +99,7 @@ header {
   height: 100%;
   border: 1px solid #9e713e;
   border-radius: 10px;
+  object-fit: cover;
 }
 .sec1__content__mod__text {
   /* border: 1px solid red; */
