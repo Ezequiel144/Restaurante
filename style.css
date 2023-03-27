@@ -119,7 +119,7 @@
 .sec1__content__mod__img__i {
   width: 100%;
   height: 100%;
-  border: 1px solid #9e713e;
+  border: 2px solid #9e713e;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -234,15 +234,19 @@
   }
 }
 .footer {
+  background-image: url(../img/footer.jpg);
+  background-position: center;
+  background-size: cover;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .footer__content {
   color: white;
+  text-shadow: 1px 1px 1px black;
 }
 .footer__content a {
   text-decoration: none;

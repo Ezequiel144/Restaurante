@@ -58,7 +58,7 @@ const contSec1 = document.querySelector(".sec1__content");
 const listLink = document.querySelectorAll(".list__art__li__a");
 const agregar = document.querySelector(".bton__ag");
 const modal = document.querySelector(".modal");
-
+const form = document.querySelector(".modal__form");
 
 agregar.addEventListener("click",()=>{
     modal.classList.toggle("mostrar");
@@ -111,15 +111,14 @@ function captura(){
     const price = document.getElementById("price").value;
     const tipo = document.getElementById("tipo").value.toLowerCase();
     menu.push(new Comidas(arch,title,texto,price,tipo));
-    /* alert(title);
+    /* alert(title);*/
     alert(arch);
-    alert(texto);
+    /*alert(texto);
     alert(price);
     alert(tipo); */
-    console.log(menu[6].text);
-    console.log(menu[6].img);
-    console.log(menu[6].price);
-    console.log(menu[6].tipo);
-    console.log(menu[6].title);
     creatMenu(menu);
 }
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+})

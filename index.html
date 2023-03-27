@@ -25,11 +25,11 @@
         </div>
     </header>
     <div class="modal">
-        <form class="modal__form" method="post">
+        <form class="modal__form" method="post" enctype="multipart/form-data">
             <label class="modal__form__title" for="title">titulo</label>
             <input id="titulo" class="modal__form__enter" id="title" type="text">
             <label class="modal__form__title" for="img">imagenes</label>
-            <input id="arch" class="modal__form__img" id="img" type="file">
+            <input id="arch" class="modal__form__img" accept=".jpg, .jpeg, .png, .svg, .gif" id="img" type="file" accept="image/*" multiple>
             <label class="modal__form__title" for="price">Precio</label>
             <input class="modal__form__enter" id="price" type="number">
             <label class="modal__form__title" for="tipo">tipo</label>
@@ -37,7 +37,7 @@
             <label class="modal__form__title" for="text">texto</label>
             <textarea id="texto" class="modal__form__enter"></textarea>
             <!-- <input type="text"  id="texto" class="modal__form__enter"> -->
-            <input class="modal__form__send" type="button" value="enviar" onclick="captura()">
+            <input class="modal__form__send" type="submit" value="enviar" onclick="captura()">
         </form>
     </div>
     <main class="main">
