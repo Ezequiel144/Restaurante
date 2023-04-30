@@ -88,6 +88,7 @@ creatMenu(menu);
 listLink.forEach(el => {
     /* console.log(el); */
     el.addEventListener("click",(e)=>{
+        /* console.log(e); */
         for(const link of listLink){
             link.classList.remove("selec");
         }
