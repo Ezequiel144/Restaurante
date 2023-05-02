@@ -56,7 +56,7 @@ const menu = [
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
-    import { collection, getFirestore, addDoc } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"
+    import { collection, getFirestore, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -77,10 +77,30 @@ const menu = [
     const analytics = getAnalytics(app);
     const db = getFirestore(app);
 // ---- firebase ---- //
+// ---- GUARDAR DATOS EN FIREBASE ---- //
 function saveEat(title,arc,text,price,tipo){
     /* console.log(title,arc,text,price,tipo); */
     addDoc(collection(db,"comidas"),{title,arc,text,price,tipo});
 }
+
+// ---- PEDIR LISTADO DE DATOS A FIREBASE ---- //
+function setDatos(){
+    return getDocs(collection(db,"comidas"));
+}
+
+window.addEventListener("load", async ()=>{
+    const queryEat = await setDatos();
+    /* const listEats = []; */
+    queryEat.forEach(doc => {
+        /* console.log(doc.data()); */
+        menu.push(doc.data());
+        /* createMenu(doc.data()); */
+    })
+    creatMenu(menu);
+    /* listEats.forEach(list =>{
+        console.log(list);
+    }) */
+})
 
 const contSec1 = document.querySelector(".sec1__content");
 const listLink = document.querySelectorAll(".list__art__li__a");
@@ -155,6 +175,8 @@ form.addEventListener("submit",(e)=>{
     /* console.log(title); */
     saveEat(title,arc,text,price,tipo);
     form.reset();
+
+
 })
 
 close.addEventListener("click",()=>{
