@@ -106,6 +106,7 @@
 }
 .sec1__content__mod {
   height: 250px;
+  /* min-height:fit-content; */
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -138,6 +139,7 @@
   border-bottom: 1px solid rgb(182, 180, 180);
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   font-size: 1rem;
 }
 .sec1__content__mod__text__title__price {
@@ -165,6 +167,13 @@
   box-shadow: 1px 1px 5px 1px;
   display: none;
   max-width: 45%;
+}
+.modal .close {
+  position: relative;
+  left: 93%;
+  cursor: pointer;
+  color: #9e713e;
+  font-weight: 700;
 }
 .modal__form {
   display: flex;

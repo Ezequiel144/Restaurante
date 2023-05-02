@@ -26,19 +26,25 @@
         </div>
     </header>
     <div class="modal">
+        <div class="close">X</div>
         <form class="modal__form" method="post" enctype="multipart/form-data">
             <label class="modal__form__title" for="title">titulo</label>
             <input id="titulo" class="modal__form__enter" id="title" type="text">
             <label class="modal__form__title" for="img">imagenes</label>
             <input id="arch" class="modal__form__img" accept=".jpg, .jpeg, .png, .svg, .gif" id="img" type="file" accept="image/*" multiple>
-            <label class="modal__form__title" for="price">Precio</label>
+            <label class="modal__form__title" for="price" disables>Precio</label>
             <input class="modal__form__enter" id="price" type="number">
             <label class="modal__form__title" for="tipo">tipo</label>
-            <input class="modal__form__enter" id="tipo" type="text">
+            <select class="modal__form__enter" name="selector" id="tipo">
+                <option class="modal__form__enter__opc" value="breakfast">Breakfast</option>
+                <option class="modal__form__enter__opc" value="lunch">Lunch</option>
+                <option class="modal__form__enter__opc" value="shakes">Shakes</option>
+            </select>
+            <!-- <input class="modal__form__enter" id="tipo" type="text"> -->
             <label class="modal__form__title" for="text">texto</label>
-            <textarea id="texto" class="modal__form__enter"></textarea>
+            <textarea id="texto" class="modal__form__enter" maxlength="150"></textarea>
             <!-- <input type="text"  id="texto" class="modal__form__enter"> -->
-            <input class="modal__form__send" type="submit" value="enviar" onclick="captura()">
+            <input class="modal__form__send" type="submit" value="enviar">
         </form>
     </div>
     <main class="main">
@@ -65,5 +71,7 @@
         <p class="footer__content">Creado por <a href="#">Ezequiel Garcia</a></p>
     </footer>
 </body>
-<script src="./app.js"></script>
+
+<!-- <script type="module" src="./js/firebase.js"></script> -->
+<script type="module" src="./js/app.js"></script>
 </html>

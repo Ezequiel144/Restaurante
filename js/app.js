@@ -43,7 +43,7 @@ const menu = [
     },
 ]
 
-class Comidas{
+/* class Comidas{
     constructor(img,title,text,price,tipo){
         this.img = img;
         this.title = title;
@@ -51,14 +51,43 @@ class Comidas{
         this.price = price;
         this.tipo = tipo;
     }
+} */
+// - firebase - //
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+    import { collection, getFirestore, addDoc } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDGR6DcGg7c-RK4n0xMRj9pXnN9jGvKsRE",
+        authDomain: "restaurante-bd-8684d.firebaseapp.com",
+        projectId: "restaurante-bd-8684d",
+        storageBucket: "restaurante-bd-8684d.appspot.com",
+        messagingSenderId: "363830553329",
+        appId: "1:363830553329:web:81ab193366d1125e039750",
+        measurementId: "G-YV755GQN70"
+    };
+      
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+// ---- firebase ---- //
+function saveEat(title,arc,text,price,tipo){
+    /* console.log(title,arc,text,price,tipo); */
+    addDoc(collection(db,"comidas"),{title,arc,text,price,tipo});
 }
-
 
 const contSec1 = document.querySelector(".sec1__content");
 const listLink = document.querySelectorAll(".list__art__li__a");
 const agregar = document.querySelector(".bton__ag");
 const modal = document.querySelector(".modal");
 const form = document.querySelector(".modal__form");
+const close = document.querySelector(".close");
 
 agregar.addEventListener("click",()=>{
     modal.classList.toggle("mostrar");
@@ -105,22 +134,29 @@ listLink.forEach(el => {
 });
 
 
-function captura(){
+/* function captura(){
     const title = document.getElementById("titulo").value;
     const arch = document.getElementById("arch").value;
     const texto = document.getElementById("texto").value;
     const price = document.getElementById("price").value;
     const tipo = document.getElementById("tipo").value.toLowerCase();
     menu.push(new Comidas(arch,title,texto,price,tipo));
-    /* alert(title);*/
-    /* alert(arch); */
-    /*alert(texto);
-    alert(price);
-    alert(tipo); */
     creatMenu(menu);
-}
+} */
 
 form.addEventListener("submit",(e)=>{
     e.preventDefault();
+    
+    const title = document.getElementById("titulo").value;
+    const arc = document.getElementById("arch").value
+    const text = document.getElementById("texto").value
+    const price = document.getElementById("price").value;
+    const tipo = document.getElementById("tipo").value;
+    /* console.log(title); */
+    saveEat(title,arc,text,price,tipo);
+    form.reset();
 })
-form.reset();
+
+close.addEventListener("click",()=>{
+    modal.classList.toggle("mostrar");
+})
